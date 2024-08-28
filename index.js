@@ -7,7 +7,6 @@ const { joinVoiceChannel, EndBehaviorType } = require('@discordjs/voice');
 const witClient = require('node-witai-speech');
 const OpenAi = require('openai');
 
-
 const openai = new OpenAi({
     apiKey: process.env.TOKEN_OPENAI,
 })
@@ -22,7 +21,6 @@ const client = new Client({
         IntentsBitField.Flags.GuildMessageTyping,
     ]
 })
-
 const guildMap = new Map();
 
 client.on('ready', () => {
